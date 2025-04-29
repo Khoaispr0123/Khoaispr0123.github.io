@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Cool Website</title>
+  <title>Kyaa Website</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -422,7 +422,7 @@ function searchScripts() {
 }
 
     function copyCode(btn) {
-      const code = btn.previousElementSibling.innerText.trim();
+      const code = btn.parentElement.innerText.replace("Copy code", "").trim();
       navigator.clipboard.writeText(code).then(() => {
         btn.textContent = "Copied!";
         setTimeout(() => btn.textContent = "Copy code", 1500);
