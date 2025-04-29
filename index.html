@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kyaa Website</title>
+  <title>My Cool Website</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-    .loadi>ng-dots span {
+    .loading-dots span {
       width: 10px;
       height: 10px;
       background-color: #58a6ff;
@@ -270,7 +270,18 @@
 
   <div class="container">
 
+
 <!-- Video 1 -->
+    <div class="video-block">
+      <h2>[🔥NEW] Fish Training Script</h2>
+      <iframe src="https://www.youtube.com/embed/" allowfullscreen></iframe>
+      <div class="code-box">
+        <button class="copy-button" onclick="copyCode(this)">Copy code</button>
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/refs/heads/main/KyaaDepZai-Fish-Training.lua"))()
+      </div>
+    </div>
+
+<!-- Video 2 -->
     <div class="video-block">
       <h2>[🔥NEW] Shoot Race Simulator Script</h2>
       <iframe src="https://www.youtube.com/embed/QX5xebBN_Lo" allowfullscreen></iframe>
@@ -278,20 +289,20 @@
         <button class="copy-button" onclick="copyCode(this)">Copy code</button>
         -- Credit to Aliframadi Script
         loadstring(game:HttpGet("https://raw.githubusercontent.com/AliframadiRealYT/AliframadiScriptYT/refs/heads/main/Shoot%20Race%20Simulator%20Script"))()
-      </div
+      </div>
     </div>
 
-<!-- Video 2 -->
+<!-- Video 3 -->
     <div class="video-block">
       <h2>[🔥NEW] Brainrot Evolution Script</h2>
       <iframe src="https://www.youtube.com/embed/jPsCDv-eCMo" allowfullscreen></iframe>
       <div class="code-box">
         <button class="copy-button" onclick="copyCode(this)">Copy code</button>
         loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BrainrotEvolution"))()
-      </div
+      </div>
     </div>
 
-    <!-- Video 3 -->
+    <!-- Video 4 -->
     <div class="video-block">
       <h2>[🔥NEW] Dig To The Earth's Core Script</h2>
       <iframe src="https://www.youtube.com/embed/dNU7EmaxrDE" allowfullscreen></iframe>
@@ -301,7 +312,7 @@
       </div>
     </div>
 
-    <!-- Video 4 -->
+    <!-- Video 5 -->
     <div class="video-block">
       <h2>[🔥NEW] Math Murder Script</h2>
       <iframe src="https://www.youtube.com/embed/0F3Dw3_WiQc" allowfullscreen></iframe>
@@ -314,7 +325,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/r
       </div>
     </div>
 
-    <!-- Video 5 -->
+    <!-- Video 6 -->
     <div class="video-block">
       <h2>[🔥NEW] Arise Crossover Script</h2>
       <iframe src="https://www.youtube.com/embed/GaYeK_FwZhw" allowfullscreen></iframe>
@@ -324,7 +335,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/r
       </div>
     </div>
 
-    <!-- Video 6 -->
+    <!-- Video 7 -->
     <div class="video-block">
       <h2>[🔥NEW] Drill Digging Simulator</h2>
       <iframe src="https://www.youtube.com/embed/04ynEHers_E" allowfullscreen></iframe>
@@ -335,7 +346,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/
       </div>
     </div>
 
-    <!-- Video 7 -->
+    <!-- Video 8 -->
     <div class="video-block">
       <h2>[🔥NEW] OP Fling Script</h2>
       <iframe src="https://www.youtube.com/embed/Q51OEYrhWtc" allowfullscreen></iframe>
@@ -411,7 +422,7 @@ function searchScripts() {
 }
 
     function copyCode(btn) {
-      const code = btn.parentElement.innerText.replace("Copy code", "").trim();
+      const code = btn.previousElementSibling.innerText.trim();
       navigator.clipboard.writeText(code).then(() => {
         btn.textContent = "Copied!";
         setTimeout(() => btn.textContent = "Copy code", 1500);
