@@ -13,6 +13,56 @@
       padding: 20px;
     }
 
+  
+  .video-block {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeBounce 0.6s ease-out forwards;
+    animation-delay: var(--delay);
+    transition: all 0.3s ease;
+    position: relative;
+    will-change: transform, opacity;
+  }
+
+  @keyframes fadeBounce {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .container:hover .video-block:not(:hover) {
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+
+  .video-block:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(88,166,255,0.3);
+    z-index: 2;
+    opacity: 1 !important;
+    filter: blur(0) !important;
+  }
+
     .loading-dots {
   display: flex;
   justify-content: center;
@@ -50,16 +100,6 @@
   width: 100%;
   max-width: 600px;
   margin: 20px auto;
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -160,14 +200,6 @@
   color: #8b949e;
 }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
     .video-block {
       background-color: #161b22;
       border-radius: 10px;
@@ -231,11 +263,11 @@
         gap: 10px;
       }
     }
+
+
   </style>
 </head>
 <body>
-
-
 
   <!-- profile info rizzz -->
   <div class="channel-info">
@@ -244,7 +276,7 @@
     <div class="channel-text">
       <div class="display-name" id="channel-title">Kyaa</div>
       <div class="username" id="channel-username">@kyaanguyen</div>
-      <div class="subscribers" id="channel-subscribers">50+ Subscriber</div>
+      <div class="subscribers" id="channel-subscribers">62+ Subscriber</div>
     </div>
   </div>
   <div class="discord-link">
@@ -270,20 +302,29 @@
 
   <div class="container">
 
+<!-- PINNED -->
+    <div class="video-block" data-index="1">
+  <h2>[📌PINNED] Kyaa Hub | All Script In ONE</h2>
+  <div class="code-box">
+    <button class="copy-button" onclick="copyCode(this)">Copy code</button>
+    -- THIS ONLY LOAD MY SCRIPT
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/refs/heads/main/KyaaHub-AllInOne.lua"))()
+  </div>
+</div>
 
 
-<!-- Soon -->
-    <div class="video-block">
-      <h2>[🔥SOON] Kyaa Hub | Brainrot Evolution Script</h2>
-      <iframe src="https://www.youtube.com/embed/" allowfullscreen></iframe>
+<!-- Video 1 -->
+    <div class="video-block" data-index="2">
+      <h2>[🔥NEW] Dig The Hole Script</h2>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
       <div class="code-box">
         <button class="copy-button" onclick="copyCode(this)">Copy code</button>
-            -- Nothing Here 💀🤑
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/refs/heads/main/KyaaDepZaiVC-DigTheHole.lua"))()
       </div>
     </div>
 
-<!-- Video 1 -->
-    <div class="video-block">
+<!-- Video 2 -->
+    <div class="video-block" data-index="2">
       <h2>[🔥NEW] Fish Training Script</h2>
       <iframe src="https://www.youtube.com/embed/gmB2FdOfjsk" allowfullscreen></iframe>
       <div class="code-box">
@@ -292,8 +333,8 @@
       </div>
     </div>
 
-<!-- Video 2 -->
-    <div class="video-block">
+<!-- Video 3 -->
+    <div class="video-block" data-index="3">
       <h2>[🔥NEW] Shoot Race Simulator Script</h2>
       <iframe src="https://www.youtube.com/embed/QX5xebBN_Lo" allowfullscreen></iframe>
       <div class="code-box">
@@ -303,8 +344,8 @@
       </div>
     </div>
 
-<!-- Video 3 -->
-    <div class="video-block">
+<!-- Video 4 -->
+    <div class="video-block" data-index="4">
       <h2>[🔥NEW] Brainrot Evolution Script</h2>
       <iframe src="https://www.youtube.com/embed/jPsCDv-eCMo" allowfullscreen></iframe>
       <div class="code-box">
@@ -313,8 +354,8 @@
       </div>
     </div>
 
-    <!-- Video 4 -->
-    <div class="video-block">
+    <!-- Video 5 -->
+    <div class="video-block" data-index="5">
       <h2>[🔥NEW] Dig To The Earth's Core Script</h2>
       <iframe src="https://www.youtube.com/embed/dNU7EmaxrDE" allowfullscreen></iframe>
       <div class="code-box">
@@ -323,8 +364,8 @@
       </div>
     </div>
 
-    <!-- Video 5 -->
-    <div class="video-block">
+    <!-- Video 6 -->
+    <div class="video-block" data-index="6">
       <h2>[🔥NEW] Math Murder Script</h2>
       <iframe src="https://www.youtube.com/embed/0F3Dw3_WiQc" allowfullscreen></iframe>
       <div class="code-box">
@@ -336,8 +377,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/r
       </div>
     </div>
 
-    <!-- Video 6 -->
-    <div class="video-block">
+    <!-- Video 7 -->
+    <div class="video-block" data-index="7">
       <h2>[🔥NEW] Arise Crossover Script</h2>
       <iframe src="https://www.youtube.com/embed/GaYeK_FwZhw" allowfullscreen></iframe>
       <div class="code-box">
@@ -346,8 +387,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/r
       </div>
     </div>
 
-    <!-- Video 7 -->
-    <div class="video-block">
+    <!-- Video 8 -->
+    <div class="video-block" data-index="8">
       <h2>[🔥NEW] Drill Digging Simulator</h2>
       <iframe src="https://www.youtube.com/embed/04ynEHers_E" allowfullscreen></iframe>
       <div class="code-box">
@@ -357,8 +398,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/
       </div>
     </div>
 
-    <!-- Video 8 -->
-    <div class="video-block">
+    <!-- Video 9 -->
+    <div class="video-block" data-index="9">
       <h2>[🔥NEW] OP Fling Script</h2>
       <iframe src="https://www.youtube.com/embed/Q51OEYrhWtc" allowfullscreen></iframe>
       <div class="code-box">
@@ -367,9 +408,26 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/
       </div>
     </div>
 
+
+<footer>
+© 2025 Kyaa. All rights reserved.
+</footer>
+
+
   </div>
 
   <script>
+  // Thêm hiệu ứng delay lần lượt cho từng video block
+  window.addEventListener("DOMContentLoaded", () => {
+    const videoBlocks = document.querySelectorAll(".video-block");
+    videoBlocks.forEach((block, index) => {
+      // Thêm delay animation theo thứ tự từ trên xuống
+      block.style.setProperty('--delay', `${index * 0.2}s`);
+      // Thêm data-index để theo dõi thứ tự
+      block.setAttribute('data-index', index);
+    });
+  });
+
 const messages = [
   "Welcome to My YouTube Channel!",
   "Explore the latest scripts!",
@@ -410,27 +468,28 @@ const messages = [
 
     typeWriter();
 
-function searchScripts() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let videoBlocks = document.querySelectorAll(".video-block");
 
-  let found = false;
-  videoBlocks.forEach(block => {
-    let title = block.querySelector("h2").textContent.toLowerCase();
-    if (title.includes(input)) {
+function searchScripts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const blocks = document.querySelectorAll(".video-block");
+  let hasResults = false;
+
+  blocks.forEach(block => {
+    const text = block.innerText.toLowerCase();
+
+    if (text.includes("📌pinned")) {
+      block.style.display = "block"; // luôn hiện pinned
+    } else if (text.includes(input)) {
       block.style.display = "block";
-      found = true;
+      hasResults = true;
     } else {
       block.style.display = "none";
     }
   });
 
-  if (!found) {
-    document.getElementById("noResults").style.display = "block";
-  } else {
-    document.getElementById("noResults").style.display = "none";
-  }
+  document.getElementById("noResults").style.display = hasResults || input === "" ? "none" : "block";
 }
+
 
     function copyCode(btn) {
       const code = btn.parentElement.innerText.replace("Copy code", "").trim();
@@ -439,8 +498,6 @@ function searchScripts() {
         setTimeout(() => btn.textContent = "Copy code", 1500);
       });
     }
-
-    
   </script>
 
 </body>
