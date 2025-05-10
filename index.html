@@ -316,7 +316,7 @@
 <!-- Video 1 -->
     <div class="video-block" data-index="2">
       <h2>[🔥NEW] Dig The Hole Script</h2>
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/IbcYoRt-uA4" allowfullscreen></iframe>
       <div class="code-box">
         <button class="copy-button" onclick="copyCode(this)">Copy code</button>
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Khoaispr0123/Script/refs/heads/main/KyaaDepZaiVC-DigTheHole.lua"))()
@@ -417,13 +417,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/
   </div>
 
   <script>
-  // Thêm hiệu ứng delay lần lượt cho từng video block
+  
   window.addEventListener("DOMContentLoaded", () => {
     const videoBlocks = document.querySelectorAll(".video-block");
     videoBlocks.forEach((block, index) => {
-      // Thêm delay animation theo thứ tự từ trên xuống
+
       block.style.setProperty('--delay', `${index * 0.2}s`);
-      // Thêm data-index để theo dõi thứ tự
+      
       block.setAttribute('data-index', index);
     });
   });
