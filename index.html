@@ -1,74 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Old Website</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: none;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      background: #222;
+      padding: 30px 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      background-color: #00ccff;
+      color: #000;
+      cursor: pointer;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    button:hover {
+      background-color: #00a3cc;
+    }
+  </style>
+
+  <script>
+    window.onload = function () {
+      let redirected = false;
+      try {
+       window.location.replace("https://kyaarb.github.io/Home");
+        redirected = true;
+      } catch (e) {}
+
+      setTimeout(function () {
+        if (!redirected) {
+          document.body.style.display = "flex";
+        }
+      }, 1000);
+    };
+  </script>
+</head>
+<body>
+  <div class="box">
+    <h2>🚧 Redirect failed</h2>
+    <p>We tried to redirect you to:</p>
+    <p><strong>https://kyaarb.github.io/Home</strong></p>
+    <button onclick="window.location.href='https://kyaarb.github.io/Home'">Try Again</button>
+  </div>
+
+  <noscript>
     <style>
-      body {
-        background-color: #111;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
-      }
-
-      .box {
-        background: #222;
-        padding: 30px 20px;
-        border-radius: 10px;
-        max-width: 400px;
-        width: 100%;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      }
-
-      h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-
-      p {
-        margin: 10px 0;
-        font-size: 1em;
-      }
-
-      button {
-        margin-top: 20px;
-        padding: 12px 24px;
-        font-size: 1em;
-        border: none;
-        border-radius: 6px;
-        background-color: #00ccff;
-        color: #000;
-        cursor: pointer;
-        width: 100%;
-        max-width: 200px;
-      }
-
-      button:hover {
-        background-color: #00a3cc;
-      }
+      body { display: flex; }
     </style>
-  </head>
-  <body>
     <div class="box">
-      <h2>🚧 Sorry, this website has moved</h2>
-      <p>We're sorry for the inconvenience.</p>
-      <p>This page has been relocated to:</p>
-      <p><strong>https://kyaarb.github.io/Home</strong></p>
-      <button onclick="redirect()">OK</button>
+      <h2>🚧 JavaScript Disabled</h2>
+      <p>This page requires JavaScript to redirect.</p>
+      <p><strong><a href="https://kyaarb.github.io/Home">Click here to go manually</a></strong></p>
     </div>
-
-    <script>
-      function redirect() {
-        window.location.href = "https://kyaarb.github.io/Home";
-      }
-    </script>
-  </body>
+  </noscript>
+</body>
 </html>
